@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Modal } from "react-native";
-// import Slider from '@react-native-community/slider';
 import GratuityModal from "./modals/GratuityModal";
 import { generate } from "shortid";
 
@@ -17,10 +16,6 @@ let gratuityTotals = subtotal =>
       tipAmount: (subtotal * (amount / 100)).toFixed(2)
     };
   });
-// gratuityOptions = [
-//   ...gratuityOptions,
-//   { tipPercentageLabel: otherTipPercentageLabel }
-// ];
 
 const Gratuity = () => {
   const [activeButton, setActiveButton] = useState(18);
@@ -37,7 +32,7 @@ const Gratuity = () => {
           <TouchableOpacity
             style={[
               styles.buttonContainer,
-              activeButton === option.amount ? styles.active : null
+              activeButton === option.amount ? styles.active : styles.notActive
             ]}
             onPress={() => {
               setActiveButton(option.amount);
@@ -47,22 +42,57 @@ const Gratuity = () => {
             key={generate()}
           >
             <View>
-              <Text style={styles.gratuityText}>{option.amount}%</Text>
+              <Text
+                style={[
+                  styles.gratuityText,
+                  activeButton === option.amount
+                    ? styles.active
+                    : styles.notActive
+                ]}
+              >
+                {option.amount}%
+              </Text>
               {option.tipAmount && (
-                <Text style={styles.amountText}>${option.tipAmount}</Text>
+                <Text
+                  style={[
+                    styles.amountText,
+                    activeButton === option.amount
+                      ? styles.active
+                      : styles.notActive
+                  ]}
+                >
+                  ${option.tipAmount}
+                </Text>
               )}
             </View>
           </TouchableOpacity>
         ))}
         <TouchableOpacity
-          style={styles.buttonContainerNoBorder}
+          style={[
+            styles.buttonContainerNoBorder,
+            activeButton === "other" ? styles.active : styles.notActive
+          ]}
           onPress={() => {
             setModalVisible(true);
           }}
           key={generate()}
         >
-          <View>
-            <Text style={styles.gratuityText}>{otherTipPercentageLabel}</Text>
+          <View
+            style={[
+              activeButton === "other" ? styles.active : styles.notActive
+            ]}
+          >
+            <Text
+              style={[
+                styles.gratuityText,
+                {
+                  fontSize: 14
+                },
+                activeButton === "other" ? styles.active : styles.notActive
+              ]}
+            >
+              {otherTipPercentageLabel}
+            </Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -72,15 +102,10 @@ const Gratuity = () => {
           setModalVisible={setModalVisible}
           tipPercent={tipPercent}
           setTipPercent={setTipPercent}
+          setActiveButton={setActiveButton}
+          setGratuityAmount={setGratuityAmount}
+          subtotal={subtotal}
         />
-
-        {/* <Slider
-					style={{ width: 200, height: 40 }}
-					minimumValue={0}
-					maximumValue={1}
-					minimumTrackTintColor='#FFFFFF'
-					maximumTrackTintColor='#000000'
-				/> */}
       </View>
     </View>
   );
@@ -101,7 +126,7 @@ const styles = StyleSheet.create({
     borderColor: blue,
     borderRadius: 4,
     flexDirection: "row",
-    height: 43.5,
+    height: 43,
     marginTop: 8
   },
 
@@ -121,22 +146,24 @@ const styles = StyleSheet.create({
     width: 59,
     flex: 1
   },
-  active: {
-    // color: white,
-    backgroundColor: blue
-  },
   border: {
     borderColor: blue,
     borderRightWidth: 1
   },
   amountText: {
-    color: grey,
     fontSize: 13,
     textAlign: "center"
   },
   gratuityText: {
-    color: grey,
     fontSize: 20,
     textAlign: "center"
+  },
+  active: {
+    color: white,
+    backgroundColor: blue
+  },
+  notActive: {
+    color: grey,
+    backgroundColor: white
   }
 });
