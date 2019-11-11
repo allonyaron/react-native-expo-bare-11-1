@@ -62,7 +62,7 @@ const GratuityModal = ({
               onPress={() => {
                 setTipPercent(sliderValue);
                 setActiveButton("other");
-                setGratuityAmount((subtotal * sliderValue) / 100);
+                setGratuityAmount(((subtotal * sliderValue) / 100).toFixed(2));
                 setModalVisible(!modalVisible);
               }}
             >

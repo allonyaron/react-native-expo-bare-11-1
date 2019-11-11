@@ -41,46 +41,42 @@ const Gratuity = () => {
             }}
             key={generate()}
           >
-            <View>
+            <Text
+              style={[
+                styles.gratuityText,
+                activeButton === option.amount
+                  ? styles.active
+                  : styles.notActive
+              ]}
+            >
+              {option.amount}%
+            </Text>
+            {option.tipAmount && (
               <Text
                 style={[
-                  styles.gratuityText,
+                  styles.amountText,
                   activeButton === option.amount
                     ? styles.active
                     : styles.notActive
                 ]}
               >
-                {option.amount}%
+                ${option.tipAmount}
               </Text>
-              {option.tipAmount && (
-                <Text
-                  style={[
-                    styles.amountText,
-                    activeButton === option.amount
-                      ? styles.active
-                      : styles.notActive
-                  ]}
-                >
-                  ${option.tipAmount}
-                </Text>
-              )}
-            </View>
+            )}
           </TouchableOpacity>
         ))}
-        <TouchableOpacity
-          style={[
-            styles.buttonContainerNoBorder,
-            activeButton === "other" ? styles.active : styles.notActive
-          ]}
-          onPress={() => {
-            setModalVisible(true);
-          }}
-          key={generate()}
+        <View
+          styles={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <View
+          <TouchableOpacity
             style={[
+              styles.buttonContainerNoBorder,
               activeButton === "other" ? styles.active : styles.notActive
             ]}
+            onPress={() => {
+              setModalVisible(true);
+            }}
+            key={generate()}
           >
             <Text
               style={[
@@ -93,8 +89,8 @@ const Gratuity = () => {
             >
               {otherTipPercentageLabel}
             </Text>
-          </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
+        </View>
       </View>
       <View>
         <GratuityModal

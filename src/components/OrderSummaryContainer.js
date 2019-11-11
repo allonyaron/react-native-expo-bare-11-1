@@ -9,7 +9,7 @@ let takeoutLabel = "TAKEOUT?";
 
 let enabled = false;
 let itemText = "Item";
-let numberOfItems = 1;
+// let numberOfItems = 1;
 let discountLabel = "Discount";
 let gratuityLabel = "Gratuity";
 let gratuity = "$8.42";
@@ -55,10 +55,19 @@ const OrderSummary = () => {
     orderSummaryCurrency,
     orderSummaryMiles,
     isCurrency,
-    tipAmount,
-    gratuityAmount
+    // tipAmount,
+    gratuityAmount,
+    itemQuantity,
+    subtotalAmount,
+    tax
   } = useContext(CheckoutContext);
   const { exceptionAmount, showException } = useContext(VoucherContext);
+
+  let totalBeforeTaxAmount = (
+    ((+subtotalAmount + +gratuityAmount) * 100 - exceptionAmount * 100) /
+    100
+  ).toFixed(2);
+  let totalAmount = (+totalBeforeTaxAmount + +tax).toFixed(2);
 
   //   console.log(`totalBeforeTaxNEW - ${totalBeforeTaxNEW}`);
   //why can't I set it this way? what's a good fix?
@@ -68,17 +77,21 @@ const OrderSummary = () => {
   //   setShowException(true);
   // }
 
-  const formattedTotal = isCurrency
-    ? formatCurrency(orderSummaryCurrency)
-    : formatMiles(orderSummaryMiles);
-  console.log(`formattedTotal - ${JSON.stringify(formattedTotal)}`);
-  console.log(`TEST`);
+  //   const formattedTotal = isCurrency
+  //     ? formatCurrency(orderSummaryCurrency)
+  //     : formatMiles(orderSummaryMiles);
+  //   console.log(`formattedTotal - ${JSON.stringify(formattedTotal)}`);
+  //   console.log(`TEST`);
 
   // console.log(`voucherData - ${JSON.stringify(voucherData.amount)}`);
 
-  const { subtotal, totalBeforeTax, tax, total } = orderSummaryCurrency;
+  //   const { subtotal, totalBeforeTax, tax, total } = orderSummaryCurrency;
 
-  totalBeforeTaxDisplay = (+totalBeforeTax * 100 - exceptionAmount * 100) / 100;
+  console.log(
+    `totalBeforeTaxAmount - ${totalBeforeTaxAmount} - exceptionAmount - ${exceptionAmount}`
+  );
+  totalBeforeTaxDisplay =
+    (+totalBeforeTaxAmount * 100 - exceptionAmount * 100) / 100;
 
   // let test = isCurrency ? "true" : "false";
   return (
@@ -95,8 +108,8 @@ const OrderSummary = () => {
         />
       </View>
       <View style={styles.rowContainer}>
-        <Text style={styles.textLabel}>{`${itemText}(${numberOfItems})`}</Text>
-        <Text style={styles.textLabel}>${subtotal}</Text>
+        <Text style={styles.textLabel}>{`${itemText}(${itemQuantity})`}</Text>
+        <Text style={styles.textLabel}>${subtotalAmount}</Text>
       </View>
       {showException && (
         <View style={styles.rowContainer}>
@@ -110,7 +123,7 @@ const OrderSummary = () => {
       </View>
       <View style={styles.rowContainer}>
         <Text style={styles.textLabel}>{totalBeforeTaxLabel}</Text>
-        <Text style={styles.textLabel}>${totalBeforeTaxDisplay}</Text>
+        <Text style={styles.textLabel}>${totalBeforeTaxAmount}</Text>
       </View>
       <View style={styles.rowContainer}>
         <Text style={styles.textLabel}>{taxLabel}</Text>
@@ -127,7 +140,7 @@ const OrderSummary = () => {
       <View style={styles.rowContainer}>
         <Text style={styles.orderTotal}>{orderTotalLabel}</Text>
         <Text style={[styles.orderTotal, styles.orderTotalAmount]}>
-          ${total}
+          ${totalAmount}
         </Text>
       </View>
     </View>
