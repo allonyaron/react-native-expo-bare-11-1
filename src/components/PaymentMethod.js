@@ -15,28 +15,21 @@ let payWithMilesTitle = "Pay With Miles";
 let joinATabTitle = "Join A Tab";
 
 const PaymentMethod = () => {
-  const { paymentMethod, setPaymentMethod } = useContext(CheckoutContext);
+  const { state, dispatch } = useContext(CheckoutContext);
+  const { paymentType } = state;
 
-  // if (paymentMethod === "CREDITCARD" || " JOINTAB") {
-  // 	setSubTotalAmount();
-  // 	setGratuityAmount();
-  //   } else {
-  // 	setSubTotalAmount(airlineSubtotalMiles);
-  // 	setGratuityAmount(airlineTip);
-  //   }
-
-  // const [isActive, setIsActive] = useState(true);
   return (
     <View>
       <View style={[styles.paymentMethodContainers]}>
         <TouchableOpacity
           onPress={() => {
-            setPaymentMethod("CREDITCARD");
+            // setPaymentMethod("CREDITCARD");
+            dispatch({ type: "SET_CURRENCY", payload: "CREDITCARD" });
           }}
         >
           <Image
             style={styles.checkImage}
-            source={paymentMethod === "CREDITCARD" ? checked : unchecked}
+            source={paymentType === "CREDITCARD" ? checked : unchecked}
           />
         </TouchableOpacity>
         <Text style={styles.text}>{creditTitle}</Text>
@@ -46,12 +39,13 @@ const PaymentMethod = () => {
         <TouchableOpacity
           // disabled={!active}
           onPress={() => {
-            setPaymentMethod("MILES");
+            // setPaymentMethod("MILES");
+            dispatch({ type: "SET_MILES", payload: "MILES" });
           }}
         >
           <Image
             style={styles.checkImage}
-            source={paymentMethod === "MILES" ? checked : unchecked}
+            source={paymentType === "MILES" ? checked : unchecked}
           />
         </TouchableOpacity>
 
@@ -61,12 +55,12 @@ const PaymentMethod = () => {
         <TouchableOpacity
           //disabled={!active}
           onPress={() => {
-            setPaymentMethod("JOINTAB");
+            dispatch({ type: "SET_CURRENCY", payload: "JOINTAB" });
           }}
         >
           <Image
             style={styles.checkImage}
-            source={paymentMethod === "JOINTAB" ? checked : unchecked}
+            source={paymentType === "JOINTAB" ? checked : unchecked}
           />
         </TouchableOpacity>
         <Text style={styles.text}>{joinATabTitle}</Text>

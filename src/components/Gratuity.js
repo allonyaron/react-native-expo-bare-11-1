@@ -8,22 +8,32 @@ import CheckoutContext from "../context/CheckoutContext";
 let otherTipPercentageLabel = "OTHER";
 
 let tipAmountArr = [16, 18, 20];
-let gratuityTotals = subtotal =>
+let gratuityTotals = (paymentType, airlineSubtotalMiles, subtotal) =>
   tipAmountArr.map(amount => {
+    let gratuityTotalAmount =
+      paymentType === "MILES"
+        ? (airlineSubtotalMiles * (amount / 100)).toFixed(0)
+        : `${(subtotal * (amount / 100)).toFixed(2)}`;
+    console.log(`gratuityTotalAmount - ${gratuityTotalAmount}`);
     return {
       amount,
       tipPercentageLabel: `${amount}%`,
-      tipAmount: (subtotal * (amount / 100)).toFixed(2)
+      tipAmount: gratuityTotalAmount
     };
   });
 
 const Gratuity = () => {
   const [activeButton, setActiveButton] = useState(18);
-  const { subtotal, setGratuityAmount } = useContext(CheckoutContext);
+  const { state, dispatch } = useContext(CheckoutContext);
+  const { subtotal, airlineSubtotalMiles, paymentType, airlineTip } = state;
   const [modalVisible, setModalVisible] = useState(false);
   const [tipPercent, setTipPercent] = useState(18);
 
-  const gratuityOptions = gratuityTotals(subtotal);
+  const gratuityOptions = gratuityTotals(
+    paymentType,
+    airlineSubtotalMiles,
+    subtotal
+  );
 
   return (
     <View>
@@ -36,7 +46,14 @@ const Gratuity = () => {
             ]}
             onPress={() => {
               setActiveButton(option.amount);
-              setGratuityAmount(option.tipAmount);
+              dispatch({
+                type:
+                  paymentType === "MILES"
+                    ? "SET_GRATUITY_MILES"
+                    : "SET_GRATUITY",
+                payload: option.tipAmount
+              });
+              // setGratuityAmount(`${option.tipAmount}`);
               setTipPercent(option.amount);
             }}
             key={generate()}
@@ -60,7 +77,8 @@ const Gratuity = () => {
                     : styles.notActive
                 ]}
               >
-                ${option.tipAmount}
+                {paymentType !== "MILES" ? "$" : null}
+                {option.tipAmount}
               </Text>
             )}
           </TouchableOpacity>
@@ -99,7 +117,7 @@ const Gratuity = () => {
           tipPercent={tipPercent}
           setTipPercent={setTipPercent}
           setActiveButton={setActiveButton}
-          setGratuityAmount={setGratuityAmount}
+          setGratuityAmount={() => {}}
           subtotal={subtotal}
         />
       </View>

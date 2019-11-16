@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 
 import data from "../../data/appState.json";
-import { isTaggedTemplateExpression } from "@babel/types";
 
 //clean this up
 
@@ -36,12 +35,18 @@ export const CheckoutProvider = ({ children }) => {
   // tax -               "tax":"1.26",
   // Order Total         "total":"23.68",
 
-  const orderSummaryCurrency = {
+  const orderSummary = {
     subtotal,
     tipAmount,
     totalBeforeTax,
     tax,
-    total
+    total,
+    airlineSubtotalMiles,
+    airlineTip,
+    airlineTotalBeforeTax,
+    airlineTax,
+    airlineTotalMiles,
+    paymentType
   };
 
   const orderSummaryMiles = {
@@ -51,26 +56,57 @@ export const CheckoutProvider = ({ children }) => {
     tax: airlineTax,
     total: airlineTotalMiles
   };
-  const initialState =
-    paymentMethod === "CREDITCARD" || " JOINTAB"
-      ? orderSummaryCurrency
-      : orderSummaryMiles;
-  console.log(`initialState - ${JSON.stringify(initialState)}`);
 
-  const getItemQuatity = items => {
+  const getItemQuantity = items => {
     let itemQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
     return itemQuantity;
   };
 
-  console.log(`tipAmount 2 - ${tipAmount}`);
+  const initialState = {
+    subtotal,
+    tipAmount,
+    totalBeforeTax,
+    tax,
+    total,
+    airlineSubtotalMiles,
+    airlineTip,
+    airlineTotalBeforeTax,
+    airlineTax,
+    airlineTotalMiles,
+    paymentType,
+    itemQuantity: getItemQuantity(cartItems)
+  };
+  // paymentMethod === "CREDITCARD" || " JOINTAB"
+  //   ? orderSummaryCurrency
+  //   : orderSummaryMiles;
 
-  console.log(`payment_type 2 - ${paymentType}`);
+  let reducer = (state, action) => {
+    switch (action.type) {
+      case "SET_CURRENCY":
+        console.log(`SET_CURRENCY`);
+        return { ...state, paymentType: action.payload };
+      case "SET_MILES":
+        console.log(`SET_MILES`);
+        return { ...state, paymentType: action.payload };
+      case "SET_GRATUITY":
+        return { ...state, tipAmount: action.payload };
+      case "SET_GRATUITY_MILES":
+        return { ...state, airlineTip: action.payload };
+      default:
+        return state;
+    }
+  };
+
+  // const CurrencyReducer = ((state = initialState), reducer);
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   const [isCurrency, setIsCurrency] = useState(true);
   const [paymentMethod, setPaymentMethod] = useState(paymentType);
 
   const [subtotalAmount, setSubTotalAmount] = useState(subtotal);
-  const [itemQuantity, setItemQuantity] = useState(getItemQuatity(cartItems));
-  const [gratuityAmount, setGratuityAmount] = useState(tipAmount);
+  // const [itemQuantity, setItemQuantity] = useState(getItemQuatity(cartItems));
+  // const [gratuityAmount, setGratuityAmount] = useState(tipAmount);
 
   // I am looking to toggle all values for payment method, subtotalamount, gratuityAmount when the paymentmethod is toggled
 
@@ -101,20 +137,22 @@ export const CheckoutProvider = ({ children }) => {
   return (
     <CheckoutContext.Provider
       value={{
-        orderSummaryMiles,
-        isCurrency,
-        setIsCurrency,
-        paymentMethod,
-        setPaymentMethod,
-        subtotal,
-
-        subtotalAmount,
-        setSubTotalAmount,
-        itemQuantity,
-        setItemQuantity,
-        gratuityAmount,
-        setGratuityAmount,
-        tax
+        // orderSummaryMiles,
+        // isCurrency,
+        // setIsCurrency,
+        // paymentMethod,
+        // setPaymentMethod,
+        // subtotal,
+        // subtotalAmount,
+        // setSubTotalAmount,
+        // itemQuantity,
+        // // setItemQuantity,
+        // gratuityAmount,
+        // setGratuityAmount,
+        // tax,
+        // itemQuantity,
+        state,
+        dispatch
       }}
     >
       {children}

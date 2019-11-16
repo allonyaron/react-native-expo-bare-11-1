@@ -1,14 +1,6 @@
 import React, { useContext } from "react";
 
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  Dimensions,
-  StatusBar
-} from "react-native";
+import { Text, View, StyleSheet, StatusBar } from "react-native";
 
 import OrientationContext from "../context/OrientationContext";
 
@@ -19,7 +11,6 @@ import SideBar from "../components/SideBar";
 
 const CheckoutScreen = () => {
   const { orientation } = useContext(OrientationContext);
-  // let orientation = 'portrait';
   if (orientation === "portrait") {
     return (
       <View style={styles.pageContainer}>
@@ -53,7 +44,6 @@ const CheckoutScreen = () => {
               <View style={styles.paymentContainerLandscape}>
                 <PaymentContainer orientation={orientation} />
               </View>
-
               <View style={styles.cartContainerLandscape}>
                 <CartContainer />
               </View>

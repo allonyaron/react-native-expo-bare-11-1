@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { View, StyleSheet, Text, Switch } from "react-native";
 
 import CheckoutContext from "../context/CheckoutContext";
@@ -9,91 +9,52 @@ let takeoutLabel = "TAKEOUT?";
 
 let enabled = false;
 let itemText = "Item";
-// let numberOfItems = 1;
 let discountLabel = "Discount";
 let gratuityLabel = "Gratuity";
 let gratuity = "$8.42";
 let totalBeforeTaxLabel = "Total Before Tax";
-
-// let totalBeforeTaxNEW = "50.45";
-
 let taxLabel = "Tax";
-// let tax = "$3.10";
-// let subtotal = "$48.90";
-// let exception = "-$10.00";
-let orderTotalLabel = "ORDER TOTAL";
-let orderTotalAmounts = "$51.00";
+let orderTotalLabel = "ORDER TOTAL:";
 
-// let isException = false;
-// let exception;
-
-//where is a good place to put formatting code?
-//review code
-const isPositive = number => Number(number) >= 0;
-
-const formatCurrency = currencyObj => {
-  return Object.keys(currencyObj).reduce((acc, key) => {
-    let objVal = Math.abs(currencyObj[key])
-      .toFixed(2)
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    acc[key] = isPositive(currencyObj[key]) ? `${objVal}` : `${objVal}`;
-    return acc;
-  }, {});
-};
-const formatMiles = milesObj => {
-  return Object.keys(milesObj).reduce((acc, key) => {
-    acc[key] = milesObj[key].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return acc;
-  }, {});
-};
 const OrderSummary = () => {
-  // const { orderSummary, setIsCurrency, isCurrency } = useContext(
-  //   CheckoutContext
-  // );
+  const { state } = useContext(CheckoutContext);
   const {
-    orderSummaryCurrency,
-    orderSummaryMiles,
-    isCurrency,
-    // tipAmount,
-    gratuityAmount,
+    paymentType,
+    subtotal,
+    tipAmount,
+    tax,
     itemQuantity,
-    subtotalAmount,
-    tax
-  } = useContext(CheckoutContext);
+    airlineSubtotalMiles,
+    airlineTip,
+    airlineTax
+  } = state;
   const { exceptionAmount, showException } = useContext(VoucherContext);
 
-  let totalBeforeTaxAmount = (
-    ((+subtotalAmount + +gratuityAmount) * 100 - exceptionAmount * 100) /
+  let subtotalDisplay =
+    paymentType === "MILES" ? airlineSubtotalMiles : `$${subtotal}`;
+
+  let discountAmountDisplay =
+    paymentType === "MILES" ? 0 : `-$${exceptionAmount}`;
+
+  let gratuityDisplay = paymentType === "MILES" ? airlineTip : `$${tipAmount}`;
+
+  let totalBeforeTaxCurrency = (
+    ((+subtotal + +tipAmount) * 100 - exceptionAmount * 100) /
     100
   ).toFixed(2);
-  let totalAmount = (+totalBeforeTaxAmount + +tax).toFixed(2);
 
-  //   console.log(`totalBeforeTaxNEW - ${totalBeforeTaxNEW}`);
-  //why can't I set it this way? what's a good fix?
-  // const [showException, setShowException] = useState(false);
+  let totalBeforeTaxMiles = (+airlineSubtotalMiles + +airlineTip).toFixed(0);
+  let totalBeforeTaxDisplay =
+    paymentType !== "MILES"
+      ? `$${totalBeforeTaxCurrency}`
+      : totalBeforeTaxMiles;
+  let taxDisplay = paymentType !== "MILES" ? `$${tax}` : airlineTax;
 
-  // if (exceptionAmount > 0) {
-  //   setShowException(true);
-  // }
+  let totalAmountCurrencyDisplay = `$${(+totalBeforeTaxCurrency + +tax).toFixed(
+    2
+  )}`;
+  let totalAmountMilesDisplay = (+totalBeforeTaxMiles + +airlineTax).toFixed(0);
 
-  //   const formattedTotal = isCurrency
-  //     ? formatCurrency(orderSummaryCurrency)
-  //     : formatMiles(orderSummaryMiles);
-  //   console.log(`formattedTotal - ${JSON.stringify(formattedTotal)}`);
-  //   console.log(`TEST`);
-
-  // console.log(`voucherData - ${JSON.stringify(voucherData.amount)}`);
-
-  //   const { subtotal, totalBeforeTax, tax, total } = orderSummaryCurrency;
-
-  console.log(
-    `totalBeforeTaxAmount - ${totalBeforeTaxAmount} - exceptionAmount - ${exceptionAmount}`
-  );
-  totalBeforeTaxDisplay =
-    (+totalBeforeTaxAmount * 100 - exceptionAmount * 100) / 100;
-
-  // let test = isCurrency ? "true" : "false";
   return (
     <View style={styles.orderSummaryContainer}>
       <Text style={styles.orderSummaryLabel}>{orderSummaryLabel}</Text>
@@ -109,39 +70,50 @@ const OrderSummary = () => {
       </View>
       <View style={styles.rowContainer}>
         <Text style={styles.textLabel}>{`${itemText}(${itemQuantity})`}</Text>
-        <Text style={styles.textLabel}>${subtotalAmount}</Text>
+        <Text style={styles.textLabel}>{subtotalDisplay}</Text>
       </View>
       {showException && (
         <View style={styles.rowContainer}>
           <Text style={styles.textLabel}>{discountLabel}</Text>
-          <Text style={styles.textLabel}>-${exceptionAmount}</Text>
+          <Text style={styles.textLabel}>{discountAmountDisplay}</Text>
         </View>
       )}
       <View style={styles.rowContainer}>
         <Text style={styles.textLabel}>{gratuityLabel}</Text>
-        <Text style={styles.textLabel}>${gratuityAmount}</Text>
+        <Text style={styles.textLabel}>{gratuityDisplay}</Text>
       </View>
       <View style={styles.rowContainer}>
         <Text style={styles.textLabel}>{totalBeforeTaxLabel}</Text>
-        <Text style={styles.textLabel}>${totalBeforeTaxAmount}</Text>
+        <Text style={styles.textLabel}>{totalBeforeTaxDisplay}</Text>
       </View>
       <View style={styles.rowContainer}>
         <Text style={styles.textLabel}>{taxLabel}</Text>
-        <Text style={styles.textLabel}>${tax}</Text>
+        <Text style={styles.textLabel}>{taxDisplay}</Text>
       </View>
       <View
         style={{
           borderBottomColor: "#C7C7C7",
           borderBottomWidth: 1
-          //   marginLeft: 13,
-          //   marginRight: 13
         }}
       />
       <View style={styles.rowContainer}>
         <Text style={styles.orderTotal}>{orderTotalLabel}</Text>
         <Text style={[styles.orderTotal, styles.orderTotalAmount]}>
-          ${totalAmount}
+          {totalAmountCurrencyDisplay}
         </Text>
+      </View>
+      {/* if miles enabled */}
+      <View style={styles.rowContainer}>
+        <View>
+          <Text style={styles.orText}>OR</Text>
+          <Text style={styles.milesTotalAmountLabel}>PAY WITH MILES</Text>
+        </View>
+        <View>
+          <Text style={[styles.milesTotalAmountLabel, styles.milesTotalAmount]}>
+            {totalAmountMilesDisplay}
+          </Text>
+          <Text style={styles.awardMilesText}>AWARD MILES</Text>
+        </View>
       </View>
     </View>
   );
@@ -149,7 +121,7 @@ const OrderSummary = () => {
 
 export default OrderSummary;
 
-const darkGrey = "#737373";
+const royalBlue = "#003399";
 
 const styles = StyleSheet.create({
   orderSummaryContainer: {
@@ -164,7 +136,6 @@ const styles = StyleSheet.create({
     height: 30,
     letterSpacing: 0.8,
     textAlign: "left"
-    // width: 209
   },
   switch: {
     flex: 0.3,
@@ -177,29 +148,51 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    // display: 'flex',
-    // flexDirection: 'row',
     marginTop: 5
   },
   takeoutLabel: {
     color: "#737373",
-    //flex: 0.7,
-    fontSize: 16.5
-    // marginLeft: 13.5,
+    fontSize: 16
   },
   textLabel: {
     marginBottom: 10,
     color: "#737373",
-    fontSize: 16.5,
+    fontSize: 16,
     height: 19
   },
   orderTotal: {
     color: "#4cd964",
-    fontSize: 14.65,
+    fontSize: 15,
     fontWeight: "bold"
-    // marginTop: 5,
   },
   orderTotalAmount: {
-    fontSize: 16.5
+    fontSize: 16,
+    textAlign: "right"
+  },
+  milesTotalAmountLabel: {
+    color: royalBlue,
+    fontSize: 15,
+    fontWeight: "bold"
+  },
+  milesTotalAmount: {
+    color: royalBlue,
+    fontSize: 16,
+    fontWeight: "bold",
+    marginTop: 12,
+    textAlign: "right"
+  },
+  orText: {
+    fontSize: 9,
+    marginBottom: 3,
+    // marginRight: 43,
+    marginTop: 3,
+    textAlign: "center"
+  },
+  awardMilesText: {
+    color: royalBlue,
+    fontSize: 8,
+    marginLeft: 3,
+    fontWeight: "bold",
+    textAlign: "right"
   }
 });
