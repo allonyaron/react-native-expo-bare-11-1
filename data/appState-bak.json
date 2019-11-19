@@ -1,0 +1,1436 @@
+{
+  "airlineTax": 2000,
+  "modifierOptionsById": {
+    "38407": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Sauce on the Side",
+      "modifierCollectionId": 0,
+      "menuItemId": 38407,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    "38411": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "No Cheese",
+      "modifierCollectionId": 0,
+      "menuItemId": 38411,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    "39730": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Mixed Greens Instead of Fries",
+      "modifierCollectionId": 0,
+      "menuItemId": 39730,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    "50767": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "No Sauce",
+      "modifierCollectionId": 0,
+      "menuItemId": 50767,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    "112618": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "25 oz. Allagash White",
+      "modifierCollectionId": 0,
+      "menuItemId": 112618,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "4.00",
+      "selected": false,
+      "airlineMiles": 500
+    },
+    "139621": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Jack Daniels $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139621,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    "139622": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Jameson $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139622,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    "139623": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Johnny Walker Black $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139623,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    "139624": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Jim Beam $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139624,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    "139625": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Cuervo Especial Gold $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139625,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    }
+  },
+  "modifierOptions": [
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Cuervo Especial Gold $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139625,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Jack Daniels $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139621,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Jameson $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139622,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "25 oz. Allagash White",
+      "modifierCollectionId": 0,
+      "menuItemId": 112618,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "4.00",
+      "selected": false,
+      "airlineMiles": 500
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "No Cheese",
+      "modifierCollectionId": 0,
+      "menuItemId": 38411,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Sauce on the Side",
+      "modifierCollectionId": 0,
+      "menuItemId": 38407,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "No Sauce",
+      "modifierCollectionId": 0,
+      "menuItemId": 50767,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Mixed Greens Instead of Fries",
+      "modifierCollectionId": 0,
+      "menuItemId": 39730,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "0.00",
+      "selected": false,
+      "airlineMiles": 0
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Jim Beam $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139624,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "0.00",
+      "selectedByDefault": false,
+      "selectionType": "CHECKBOX",
+      "title": "Shot of Johnny Walker Black $5.00",
+      "modifierCollectionId": 0,
+      "menuItemId": 139623,
+      "displayPriceInMiles": 0,
+      "menuItemPrice": "5.00",
+      "selected": false,
+      "airlineMiles": 630
+    }
+  ],
+  "subtotal": "227.00",
+  "totalBeforeTax": "267.86",
+  "airlineTip": 5110,
+  "airlineCharge": 120,
+  "items": [
+    {
+      "quantity": 1,
+      "description": "Relive the tart, sweet taste of summer.",
+      "displayPrice": "4.00",
+      "imageUrl": "/images/media/media_2761.jpg",
+      "title": "Lemonade",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 72502,
+      "displayPriceInMiles": 500,
+      "menuItemPrice": "4.00",
+      "modifierGroups": [],
+      "airlineMiles": 500
+    },
+    {
+      "quantity": 1,
+      "description": "This is Allagash's interpretation of a traditional Belgian wheat beer. Brewed with a generous portion of wheat and spiced with coriander and Curacao orange peel, this beer is fruity, refreshing, and slightly cloudy in appearance. Portland, ME 5% ABV",
+      "displayPrice": "11.00",
+      "imageUrl": "/images/media/media_20130.jpg",
+      "title": "Allagash White Draft",
+      "modifierCollectionId": 708,
+      "selectedModifiers": [],
+      "menuItemId": 74504,
+      "displayPriceInMiles": 1380,
+      "menuItemPrice": "11.00",
+      "modifierGroups": [
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 711,
+          "maximumSelections": 1000,
+          "title": "Would you like a 25 oz. Allagash White?",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "25 oz. Allagash White",
+              "modifierCollectionId": 0,
+              "menuItemId": 112618,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "4.00",
+              "selected": false,
+              "airlineMiles": 500
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 2100,
+          "maximumSelections": 1,
+          "title": "Add a Shot:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jack Daniels $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139621,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jameson $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139622,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jim Beam $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139624,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Johnny Walker Black $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139623,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Cuervo Especial Gold $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139625,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            }
+          ]
+        }
+      ],
+      "airlineMiles": 1380
+    },
+    {
+      "quantity": 1,
+      "description": "Rebel IPA is brewed with several hop varieties including Cascade, Centennial, Simcoe and Chinook – with the addition of Mosaic hops, HBC 566, and HBC 682, a new, experimental bittering hop. Rebel IPA has a more intense juicy, tropical and citrus flavor supported by a leaner body and a crisp, clean finish to optimize the hop character. To dial up the hop impression, the newly reborn Rebel IPA removed caramel malt from the grain bill and now is brewed only with Samuel Adams special two-row malt blend. 6.5% ABV",
+      "displayPrice": "9.25",
+      "imageUrl": "/images/media/media_28477.jpg",
+      "title": "Samuel Adams Rebel IPA",
+      "modifierCollectionId": 2248,
+      "selectedModifiers": [],
+      "menuItemId": 119701,
+      "displayPriceInMiles": 1160,
+      "menuItemPrice": "9.25",
+      "modifierGroups": [
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 2100,
+          "maximumSelections": 1,
+          "title": "Add a Shot:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jack Daniels $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139621,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jameson $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139622,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jim Beam $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139624,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Johnny Walker Black $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139623,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Cuervo Especial Gold $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139625,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            }
+          ]
+        }
+      ],
+      "airlineMiles": 1160
+    },
+    {
+      "quantity": 1,
+      "description": "Our chefs start with a crispy, herb-breaded chicken breast, top it with fresh mozzarella and provolone cheese, and finish with a housemade pomodoro sauce and basil. Served on a Portuguese roll with a side of golden French fries.",
+      "displayPrice": "14.50",
+      "imageUrl": "/images/media/media_21039.jpg",
+      "title": "Chicken Parmesan Sandwich",
+      "modifierCollectionId": 1382,
+      "selectedModifiers": [],
+      "menuItemId": 72965,
+      "displayPriceInMiles": 1820,
+      "menuItemPrice": "14.50",
+      "modifierGroups": [
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 1351,
+          "maximumSelections": 1000,
+          "title": "Meatball Parm Options:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "No Cheese",
+              "modifierCollectionId": 0,
+              "menuItemId": 38411,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 945,
+          "maximumSelections": 1000,
+          "title": "Sauce Options:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Sauce on the Side",
+              "modifierCollectionId": 0,
+              "menuItemId": 38407,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "No Sauce",
+              "modifierCollectionId": 0,
+              "menuItemId": 50767,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 915,
+          "maximumSelections": 1000,
+          "title": "Instead of Fries:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Mixed Greens Instead of Fries",
+              "modifierCollectionId": 0,
+              "menuItemId": 39730,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        }
+      ],
+      "airlineMiles": 1820
+    },
+    {
+      "quantity": 1,
+      "description": "Enjoy this effervescent cocktail made with Grey Goose, St. Germain elderflower liqueur, lime juice, and club soda.",
+      "displayPrice": "15.00",
+      "imageUrl": "/images/media/media_28694.jpg",
+      "title": "Le Fizz",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 119674,
+      "displayPriceInMiles": 1880,
+      "menuItemPrice": "15.00",
+      "modifierGroups": [],
+      "airlineMiles": 1880
+    },
+    {
+      "quantity": 1,
+      "description": "Our Chefs take an all kobe beef fried dog, “Ripper Style” and top it with mac and cheese, pickled jalapeno, BBQ sauce & ranch. Served with a side of fries.",
+      "displayPrice": "12.50",
+      "imageUrl": "/images/media/media_31432.jpg",
+      "title": "Slob Dog",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 140003,
+      "displayPriceInMiles": 1570,
+      "menuItemPrice": "12.50",
+      "modifierGroups": [],
+      "airlineMiles": 1570
+    },
+    {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "1.00",
+      "imageUrl": "/images/media/media_32378.jpg",
+      "title": "Shelter Newark's Homeless",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 143707,
+      "displayPriceInMiles": 130,
+      "menuItemPrice": "1.00",
+      "modifierGroups": [],
+      "airlineMiles": 130
+    }
+  ],
+  "modifierCollectionsById": {
+    "0": {
+      "id": 0,
+      "groups": []
+    },
+    "708": {
+      "id": 708,
+      "groups": [711, 2100]
+    },
+    "1382": {
+      "id": 1382,
+      "groups": [1351, 945, 915]
+    },
+    "2248": {
+      "id": 2248,
+      "groups": [2100]
+    }
+  },
+  "tabItems": [],
+  "conciergeVersion": "3.11.1.uap",
+  "tipPercentage": "0.18",
+  "ccvScannerEnabled": false,
+  "moniker": "",
+  "modifierGroupsById": {
+    "711": {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 711,
+      "maximumSelections": 1000,
+      "title": "Would you like a 25 oz. Allagash White?",
+      "addonItems": false,
+      "modifierItems": [112618]
+    },
+    "915": {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 915,
+      "maximumSelections": 1000,
+      "title": "Instead of Fries:",
+      "addonItems": false,
+      "modifierItems": [39730]
+    },
+    "945": {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 945,
+      "maximumSelections": 1000,
+      "title": "Sauce Options:",
+      "addonItems": false,
+      "modifierItems": [38407, 50767]
+    },
+    "1351": {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 1351,
+      "maximumSelections": 1000,
+      "title": "Meatball Parm Options:",
+      "addonItems": false,
+      "modifierItems": [38411]
+    },
+    "2100": {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 2100,
+      "maximumSelections": 1,
+      "title": "Add a Shot:",
+      "addonItems": false,
+      "modifierItems": [139621, 139622, 139624, 139623, 139625]
+    }
+  },
+  "isTabOpen": false,
+  "cmsIp": "http://10.80.10.96",
+  "success": 1,
+  "upsellItems": [74504, 72502, 119674, 119701, 143707],
+  "cartItems": [
+    {
+      "quantity": 17,
+      "description": "Our Chefs take an all kobe beef fried dog, “Ripper Style” and top it with mac and cheese, pickled jalapeno, BBQ sauce & ranch. Served with a side of fries.",
+      "itemType": "cart",
+      "displayPrice": "212.50",
+      "selectedRadios": {},
+      "selectedChecks": [],
+      "uniqueId": "140003",
+      "imageUrl": "/images/media/media_31432.jpg",
+      "title": "Slob Dog",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 140003,
+      "displayPriceInMiles": 26690,
+      "menuItemPrice": "12.50",
+      "modifierGroups": [],
+      "airlineMiles": 1570
+    },
+    {
+      "quantity": 1,
+      "description": "Our chefs start with a crispy, herb-breaded chicken breast, top it with fresh mozzarella and provolone cheese, and finish with a housemade pomodoro sauce and basil. Served on a Portuguese roll with a side of golden French fries.",
+      "itemType": "cart",
+      "displayPrice": "14.50",
+      "selectedRadios": {},
+      "selectedChecks": [],
+      "uniqueId": "72965",
+      "imageUrl": "/images/media/media_21039.jpg",
+      "title": "Chicken Parmesan Sandwich",
+      "modifierCollectionId": 1382,
+      "selectedModifiers": [],
+      "menuItemId": 72965,
+      "displayPriceInMiles": 1820,
+      "menuItemPrice": "14.50",
+      "modifierGroups": [
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 1351,
+          "maximumSelections": 1000,
+          "title": "Meatball Parm Options:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "No Cheese",
+              "modifierCollectionId": 0,
+              "menuItemId": 38411,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 945,
+          "maximumSelections": 1000,
+          "title": "Sauce Options:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Sauce on the Side",
+              "modifierCollectionId": 0,
+              "menuItemId": 38407,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "No Sauce",
+              "modifierCollectionId": 0,
+              "menuItemId": 50767,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 915,
+          "maximumSelections": 1000,
+          "title": "Instead of Fries:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Mixed Greens Instead of Fries",
+              "modifierCollectionId": 0,
+              "menuItemId": 39730,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        }
+      ],
+      "airlineMiles": 1820
+    }
+  ],
+  "translations": {
+    "cancel": "Cancel",
+    "unpaid": "Unpaid",
+    "promotions": "PROMOTIONS",
+    "charge": "Charge",
+    "expirationDate": "Expiration Date",
+    "inYourTab": "IN YOUR TAB",
+    "addToTab": "ADD TO TAB",
+    "pleaseEnterYourRedemptionCodeBelowAndTapSubmitToContinue": "Please enter your redemption code below and tap Submit to continue.",
+    "gratuity": "Gratuity:",
+    "tax": "Tax & Charge",
+    "applyTip": "Apply Tip",
+    "redeemVouchers": "Redeem Vouchers",
+    "credit": "Credit",
+    "totalBeforeTax": "Total before tax:",
+    "or": "OR",
+    "theTipAmount": "the tip amount",
+    "redemptionCode": "Redemption Code",
+    "yourVoucherHasBeenApplied": "Your voucher has been applied",
+    "takeout": "TAKEOUT?",
+    "voucherNumber": "Voucher Number",
+    "voucherAmount": "Voucher Amount",
+    "applyAnotherVoucher": "Apply another voucher",
+    "scanYourBoardingPassToViewOffers": "SCAN YOUR BOARDING PASS TO VIEW OFFERS",
+    "creditCardVoucher": "Credit Card Voucher",
+    "onYourCheck": "on your check",
+    "addMoreItems": "Add More Items",
+    "enterPromoCode": "Enter Promo Code",
+    "joinATab": "JOIN A TAB",
+    "submit": "Submit",
+    "item": "Item",
+    "back": "BACK",
+    "pleaseEnterYourVoucherInformationBelowAndTapSubmitToContinue": "Please enter your voucher information below and tap Submit to continue.",
+    "welcome": "WELCOME",
+    "payWithMiles": "PAY WITH MILES",
+    "items": "Items",
+    "notYourTab": "Not Your Tab?",
+    "continue": "Continue",
+    "pleaseEnter": "Please Enter",
+    "chooseVoucherType": "Choose Voucher Type",
+    "upgradeYourMeal": "UPGRADE YOUR MEAL",
+    "closeTab": "CLOSE TAB",
+    "miles": "Miles",
+    "orderTotal": "ORDER TOTAL:",
+    "updateCheck": "Update Check",
+    "discount": "Discount",
+    "redeemVoucher": "Redeem Voucher",
+    "orderSummary": "ORDER SUMMARY",
+    "other": "OTHER",
+    "payNow": "PAY NOW",
+    "payWith": "PAY WITH",
+    "awardMiles": "AWARD MILES",
+    "addToCheck": "Add to Check",
+    "paymentMethod": "PAYMENT METHOD",
+    "ok": "OK"
+  },
+  "airlineTotalBeforeTax": 33490,
+  "languageCode": "eng",
+  "tipAmount": "40.86",
+  "shouldAllowPayment": true,
+  "cartHasFees": true,
+  "shouldAllowMilesPayment": true,
+  "modifierGroups": [
+    {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 2100,
+      "maximumSelections": 1,
+      "title": "Add a Shot:",
+      "addonItems": false,
+      "modifierItems": [139621, 139622, 139624, 139623, 139625]
+    },
+    {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 711,
+      "maximumSelections": 1000,
+      "title": "Would you like a 25 oz. Allagash White?",
+      "addonItems": false,
+      "modifierItems": [112618]
+    },
+    {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 945,
+      "maximumSelections": 1000,
+      "title": "Sauce Options:",
+      "addonItems": false,
+      "modifierItems": [38407, 50767]
+    },
+    {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 915,
+      "maximumSelections": 1000,
+      "title": "Instead of Fries:",
+      "addonItems": false,
+      "modifierItems": [39730]
+    },
+    {
+      "selectionType": "CHECKBOX",
+      "minimumSelections": 0,
+      "id": 1351,
+      "maximumSelections": 1000,
+      "title": "Meatball Parm Options:",
+      "addonItems": false,
+      "modifierItems": [38411]
+    }
+  ],
+  "checkName": "DO_NOT_MAKE-4dkua",
+  "noKitchen": 0,
+  "total": "283.89",
+  "warnings": {
+    "alcoholWarningTitle": "Alcohol Warning:",
+    "rawFoodProductTitle": "Raw Food Product:",
+    "allergyWarningBody": "Menu items contain common food allergens such as those found in peanuts, tree nuts, fish, shellfish, eggs, milk, wheat and soy. Our facilities are NOT allergen free environments.",
+    "rawFoodProductBody": "Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of food borne illnesses.",
+    "alcoholWarningBody": "Customers must be 21 years of age or older to order and/ or drink alcoholic beverages.",
+    "allergyWarningTitle": "Allergy Warning:"
+  },
+  "airlineTipMiles": 5110,
+  "airlineTotalException": 0,
+  "ccVoucher": false,
+  "airlineSubtotalMiles": 28380,
+  "taxAndFeeSeparate": false,
+  "promotions": [
+    {
+      "name": "chase",
+      "enabled": true,
+      "applied": false
+    },
+    {
+      "name": "jetblue",
+      "enabled": true,
+      "applied": false
+    },
+    {
+      "name": "papi",
+      "enabled": false,
+      "applied": true
+    },
+    {
+      "enabled": true,
+      "name": "united",
+      "applied": false,
+      "originalTotalMiles": 35370
+    }
+  ],
+  "totalException": "0.00",
+  "paymentType": "CREDITCARD",
+  "modifierCollections": [
+    {
+      "id": 0,
+      "groups": []
+    },
+    {
+      "id": 2248,
+      "groups": [2100]
+    },
+    {
+      "id": 1382,
+      "groups": [1351, 945, 915]
+    },
+    {
+      "id": 708,
+      "groups": [711, 2100]
+    }
+  ],
+  "isMileagePlusEnabled": true,
+  "boardingPassEnabled": true,
+  "tabCartTotal": "0.00",
+  "joinTabEnabled": true,
+  "orderType": "DINEIN",
+  "airlineTaxMiles": 1880,
+  "tax": "16.03",
+  "cartFeeList": [
+    {
+      "amount": "$0.99",
+      "amountMiles": 120,
+      "name": "Delivery Charge",
+      "description": "This is a service fee applied to all orders to cover the cost of delivery.This is a service fee applied to all orders."
+    },
+    {
+      "amount": "$15.04",
+      "amountMiles": 1880,
+      "name": "Tax",
+      "description": ""
+    },
+    {
+      "amount": "$16.03",
+      "amountMiles": 2000,
+      "name": "Total",
+      "description": ""
+    }
+  ],
+  "airlineTotalExceptionMiles": 130,
+  "airlineTotalMiles": 35500,
+  "promoScannerEnabled": true,
+  "itemsById": {
+    "72502": {
+      "quantity": 1,
+      "description": "Relive the tart, sweet taste of summer.",
+      "displayPrice": "4.00",
+      "imageUrl": "/images/media/media_2761.jpg",
+      "title": "Lemonade",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 72502,
+      "displayPriceInMiles": 500,
+      "menuItemPrice": "4.00",
+      "modifierGroups": [],
+      "airlineMiles": 500
+    },
+    "72965": {
+      "quantity": 1,
+      "description": "Our chefs start with a crispy, herb-breaded chicken breast, top it with fresh mozzarella and provolone cheese, and finish with a housemade pomodoro sauce and basil. Served on a Portuguese roll with a side of golden French fries.",
+      "displayPrice": "14.50",
+      "imageUrl": "/images/media/media_21039.jpg",
+      "title": "Chicken Parmesan Sandwich",
+      "modifierCollectionId": 1382,
+      "selectedModifiers": [],
+      "menuItemId": 72965,
+      "displayPriceInMiles": 1820,
+      "menuItemPrice": "14.50",
+      "modifierGroups": [
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 1351,
+          "maximumSelections": 1000,
+          "title": "Meatball Parm Options:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "No Cheese",
+              "modifierCollectionId": 0,
+              "menuItemId": 38411,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 945,
+          "maximumSelections": 1000,
+          "title": "Sauce Options:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Sauce on the Side",
+              "modifierCollectionId": 0,
+              "menuItemId": 38407,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "No Sauce",
+              "modifierCollectionId": 0,
+              "menuItemId": 50767,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 915,
+          "maximumSelections": 1000,
+          "title": "Instead of Fries:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Mixed Greens Instead of Fries",
+              "modifierCollectionId": 0,
+              "menuItemId": 39730,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "0.00",
+              "selected": false,
+              "airlineMiles": 0
+            }
+          ]
+        }
+      ],
+      "airlineMiles": 1820
+    },
+    "74504": {
+      "quantity": 1,
+      "description": "This is Allagash's interpretation of a traditional Belgian wheat beer. Brewed with a generous portion of wheat and spiced with coriander and Curacao orange peel, this beer is fruity, refreshing, and slightly cloudy in appearance. Portland, ME 5% ABV",
+      "displayPrice": "11.00",
+      "imageUrl": "/images/media/media_20130.jpg",
+      "title": "Allagash White Draft",
+      "modifierCollectionId": 708,
+      "selectedModifiers": [],
+      "menuItemId": 74504,
+      "displayPriceInMiles": 1380,
+      "menuItemPrice": "11.00",
+      "modifierGroups": [
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 711,
+          "maximumSelections": 1000,
+          "title": "Would you like a 25 oz. Allagash White?",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "25 oz. Allagash White",
+              "modifierCollectionId": 0,
+              "menuItemId": 112618,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "4.00",
+              "selected": false,
+              "airlineMiles": 500
+            }
+          ]
+        },
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 2100,
+          "maximumSelections": 1,
+          "title": "Add a Shot:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jack Daniels $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139621,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jameson $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139622,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jim Beam $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139624,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Johnny Walker Black $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139623,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Cuervo Especial Gold $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139625,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            }
+          ]
+        }
+      ],
+      "airlineMiles": 1380
+    },
+    "119674": {
+      "quantity": 1,
+      "description": "Enjoy this effervescent cocktail made with Grey Goose, St. Germain elderflower liqueur, lime juice, and club soda.",
+      "displayPrice": "15.00",
+      "imageUrl": "/images/media/media_28694.jpg",
+      "title": "Le Fizz",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 119674,
+      "displayPriceInMiles": 1880,
+      "menuItemPrice": "15.00",
+      "modifierGroups": [],
+      "airlineMiles": 1880
+    },
+    "119701": {
+      "quantity": 1,
+      "description": "Rebel IPA is brewed with several hop varieties including Cascade, Centennial, Simcoe and Chinook – with the addition of Mosaic hops, HBC 566, and HBC 682, a new, experimental bittering hop. Rebel IPA has a more intense juicy, tropical and citrus flavor supported by a leaner body and a crisp, clean finish to optimize the hop character. To dial up the hop impression, the newly reborn Rebel IPA removed caramel malt from the grain bill and now is brewed only with Samuel Adams special two-row malt blend. 6.5% ABV",
+      "displayPrice": "9.25",
+      "imageUrl": "/images/media/media_28477.jpg",
+      "title": "Samuel Adams Rebel IPA",
+      "modifierCollectionId": 2248,
+      "selectedModifiers": [],
+      "menuItemId": 119701,
+      "displayPriceInMiles": 1160,
+      "menuItemPrice": "9.25",
+      "modifierGroups": [
+        {
+          "selectionType": "CHECKBOX",
+          "minimumSelections": 0,
+          "id": 2100,
+          "maximumSelections": 1,
+          "title": "Add a Shot:",
+          "addonItems": false,
+          "modifierItems": [
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jack Daniels $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139621,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jameson $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139622,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Jim Beam $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139624,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Johnny Walker Black $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139623,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            },
+            {
+              "quantity": 1,
+              "description": "",
+              "displayPrice": "0.00",
+              "selectedByDefault": false,
+              "selectionType": "CHECKBOX",
+              "title": "Shot of Cuervo Especial Gold $5.00",
+              "modifierCollectionId": 0,
+              "menuItemId": 139625,
+              "displayPriceInMiles": 0,
+              "menuItemPrice": "5.00",
+              "selected": false,
+              "airlineMiles": 630
+            }
+          ]
+        }
+      ],
+      "airlineMiles": 1160
+    },
+    "140003": {
+      "quantity": 1,
+      "description": "Our Chefs take an all kobe beef fried dog, “Ripper Style” and top it with mac and cheese, pickled jalapeno, BBQ sauce & ranch. Served with a side of fries.",
+      "displayPrice": "12.50",
+      "imageUrl": "/images/media/media_31432.jpg",
+      "title": "Slob Dog",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 140003,
+      "displayPriceInMiles": 1570,
+      "menuItemPrice": "12.50",
+      "modifierGroups": [],
+      "airlineMiles": 1570
+    },
+    "143707": {
+      "quantity": 1,
+      "description": "",
+      "displayPrice": "1.00",
+      "imageUrl": "/images/media/media_32378.jpg",
+      "title": "Shelter Newark's Homeless",
+      "modifierCollectionId": 0,
+      "selectedModifiers": [],
+      "menuItemId": 143707,
+      "displayPriceInMiles": 130,
+      "menuItemPrice": "1.00",
+      "modifierGroups": [],
+      "airlineMiles": 130
+    }
+  },
+  "charge": "0.99",
+  "paymentDeferred": 0
+}

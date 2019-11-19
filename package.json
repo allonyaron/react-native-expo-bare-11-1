@@ -11,6 +11,7 @@
     "@react-native-community/slider": "^2.0.3",
     "expo": "^35.0.0",
     "react": "16.8.3",
+    "react-devtools": "^3.6.3",
     "react-dom": "16.8.3",
     "react-native": "0.59.10",
     "react-native-gesture-handler": "~1.4.1",

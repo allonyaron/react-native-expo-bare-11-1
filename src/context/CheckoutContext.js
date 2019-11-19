@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from "react";
 
-import data from "../../data/appState.json";
+import data from "../../data/appState-bak.json";
 
 //clean this up
 
@@ -24,7 +24,8 @@ export const CheckoutProvider = ({ children }) => {
     airlineTax,
     airlineTotalMiles,
     paymentType,
-    cartItems
+    cartItems,
+    cmsIp
   } = data;
 
   // Order SUmmary
@@ -74,7 +75,9 @@ export const CheckoutProvider = ({ children }) => {
     airlineTax,
     airlineTotalMiles,
     paymentType,
-    itemQuantity: getItemQuantity(cartItems)
+    itemQuantity: getItemQuantity(cartItems),
+    cartItems,
+    cmsIp
   };
   // paymentMethod === "CREDITCARD" || " JOINTAB"
   //   ? orderSummaryCurrency
@@ -101,10 +104,10 @@ export const CheckoutProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const [isCurrency, setIsCurrency] = useState(true);
-  const [paymentMethod, setPaymentMethod] = useState(paymentType);
+  // const [isCurrency, setIsCurrency] = useState(true);
+  // const [paymentMethod, setPaymentMethod] = useState(paymentType);
 
-  const [subtotalAmount, setSubTotalAmount] = useState(subtotal);
+  // const [subtotalAmount, setSubTotalAmount] = useState(subtotal);
   // const [itemQuantity, setItemQuantity] = useState(getItemQuatity(cartItems));
   // const [gratuityAmount, setGratuityAmount] = useState(tipAmount);
 

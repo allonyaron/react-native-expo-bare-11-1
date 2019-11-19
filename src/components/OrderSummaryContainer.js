@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { View, StyleSheet, Text, Switch } from "react-native";
 
 import CheckoutContext from "../context/CheckoutContext";
@@ -29,6 +29,25 @@ const OrderSummary = () => {
     airlineTax
   } = state;
   const { exceptionAmount, showException } = useContext(VoucherContext);
+
+  const [takeoutSwitch, setTakeoutSwitch] = useState(false);
+  const [takeout, setTakeout] = useState("DINEIN");
+
+  // let takeoutReducer = (state, action) => {
+  //   switch (action.type) {
+  //     case "SET_SWITCH":
+  //       return { ...state, paymentType: action.payload };
+  //     case "SET_MILES":
+  //       console.log(`SET_MILES`);
+  //       return { ...state, paymentType: action.payload };
+  //     case "SET_GRATUITY":
+  //       return { ...state, tipAmount: action.payload };
+  //     case "SET_GRATUITY_MILES":
+  //       return { ...state, airlineTip: action.payload };
+  //     default:
+  //       return state;
+  //   }
+  // };
 
   let subtotalDisplay =
     paymentType === "MILES" ? airlineSubtotalMiles : `$${subtotal}`;
@@ -62,8 +81,11 @@ const OrderSummary = () => {
         <Text style={styles.takeoutLabel}>{takeoutLabel}</Text>
         <Switch
           style={styles.switch}
-          value={enabled}
-          onValueChange={() => {}}
+          value={takeoutSwitch}
+          onValueChange={takeoutSwitch => {
+            setTakeoutSwitch(takeoutSwitch => !takeoutSwitch);
+            setTakeout(takeoutSwitch === false ? "DINEIN" : "TOGO");
+          }}
           // ios_backgroundColor={"#737373"}
           // trackColor={{ false: "#737373", true: "#737373" }}
         />
