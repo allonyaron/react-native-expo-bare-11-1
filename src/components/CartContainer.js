@@ -38,7 +38,7 @@ function Minus({ subtractQuantity, minusStyle }) {
   );
 }
 
-const ItemContainer = ({ item, cmsIp }) => {
+const ItemContainer = ({ item, cmsIp, paymentType }) => {
   const { quantity, displayPrice, title, displayPriceInMiles, imageUrl } = item;
 
   return (
@@ -53,14 +53,16 @@ const ItemContainer = ({ item, cmsIp }) => {
         <Text style={styles.quantityText}>{quantity}</Text>
         <Plus />
       </View>
-      <Text style={styles.itemPrice}>${displayPrice}</Text>
+      <Text style={styles.itemPrice}>
+        {paymentType === "MILES" ? displayPriceInMiles : `$${displayPrice}`}
+      </Text>
     </View>
   );
 };
 
 const CartContainer = () => {
   const { state } = useContext(CheckoutContext);
-  const { itemQuantity, cartItems, cmsIp } = state;
+  const { itemQuantity, cartItems, cmsIp, paymentType } = state;
 
   return (
     <View style={styles.itemsContainer}>
@@ -71,7 +73,14 @@ const CartContainer = () => {
       </View>
       <ScrollView style={{ flex: 1 }}>
         {cartItems.map((item, idx) => {
-          return <ItemContainer item={item} key={idx} cmsIp={cmsIp} />;
+          return (
+            <ItemContainer
+              item={item}
+              key={idx}
+              cmsIp={cmsIp}
+              paymentType={paymentType}
+            />
+          );
         })}
       </ScrollView>
     </View>
@@ -95,13 +104,15 @@ const styles = StyleSheet.create({
     textAlign: "left"
   },
   headerBorder: {
-    borderBottomWidth: 1,
-    borderColor: "#C7C7C7"
+    // borderBottomWidth: 1,
+    // borderColor: "#C7C7C7"
   },
   itemContainer: {
     // flex: 1,
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+    borderTopWidth: 1,
+    borderColor: "#C7C7C7"
   },
   itemImage: {
     height: 56,
